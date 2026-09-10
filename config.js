@@ -1,0 +1,9 @@
+export const SUPABASE_URL = "https://otadbnwnfetwbhqqhjwj.supabase.co";
+export const SUPABASE_ANON_KEY = "sb_publishable_8szB2oUM7DCtWWHRubegYw_A4Q47jeu";
+export const AI_FUNCTION_URL = `${SUPABASE_URL}/functions/v1/ai-chat`;
+export const PAYMENT_FUNCTION_URL = `${SUPABASE_URL}/functions/v1/create-payment`;
+export const MIDTRANS_CLIENT_KEY = "Mid-client-HJrwNgTi4jyfPAi_";
+export const MIDTRANS_SNAP_URL = "https://app.sandbox.midtrans.com/snap/snap.js";
+export const WHATSAPP_NUMBER = "6281280380626";
+export const SITE_NAME = "ELANGKREATOR";
+export const isConfigured = !SUPABASE_URL.includes("YOUR-PROJECT") && !SUPABASE_ANON_KEY.includes("YOUR_SUPABASE");
