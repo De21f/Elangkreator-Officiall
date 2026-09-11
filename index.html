@@ -1,14 +1,585 @@
-<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="ELANGKREATOR — branding, desain, produk digital, AI assistant dan layanan kreatif."><meta property="og:title" content="ELANGKREATOR — Creative Business Platform"><meta property="og:description" content="Temukan solusi kreatif, konsultasi, produk digital dan checkout online."><meta name="theme-color" content="#070b12"><link rel="manifest" href="manifest.webmanifest"><title>ELANGKREATOR — Creative Business Platform</title><link rel="stylesheet" href="assets/css/style.css"></head><body>
-<header><nav class="container nav"><a class="brand" href="#home">🦅 <span>ELANGKREATOR</span></a><button id="menu" class="menu" aria-label="Menu">☰</button><div id="navLinks"><a href="#home">Home</a><a href="#solusi">Solusi</a><a href="#portfolio">Portfolio</a><a href="#produk">Produk</a><a href="#testimoni">Testimoni</a><a href="#kontak">Order</a><a class="btn mini" href="admin.html">Admin</a></div></nav></header>
-<main><section id="home" class="hero"><div class="container hero-grid"><div><p class="eyebrow">CREATIVE • DIGITAL • AI • GROWTH</p><h1>Ubah ide menjadi <span>brand yang bernilai.</span></h1><p class="lead">ELANGKREATOR membantu bisnis, creator, dan pemilik brand membangun identitas, desain, produk digital, dan strategi kreatif dalam satu ekosistem.</p><div class="actions"><a class="btn" href="#solusi">Temukan Solusi</a><button class="btn outline" id="openAi">🤖 Tanya ELANG AI</button></div><p class="status" id="heroStatus"></p></div><div class="hero-card"><div class="logo-orb">ELANG<br><strong>KREATOR</strong></div><p>Create with purpose. Grow with strategy.</p></div></div></section>
-<section id="solusi" class="section"><div class="container"><p class="eyebrow">SOLUSI BERDASARKAN KEBUTUHAN</p><h2>Apa yang sedang Anda butuhkan?</h2><div class="cards"><article class="card"><div class="body"><h3>🏪 Saya punya bisnis</h3><p>Bangun identitas brand yang terlihat profesional dan konsisten.</p><button class="btn mini solution" data-service="Branding Kit">Saya butuh branding</button></div></article><article class="card"><div class="body"><h3>🎨 Saya butuh desain</h3><p>Buat materi visual untuk promosi, sosial media, dan campaign.</p><button class="btn mini solution" data-service="Desain Kreatif">Saya butuh desain</button></div></article><article class="card"><div class="body"><h3>💻 Saya ingin produk digital</h3><p>Temukan template dan aset digital yang siap digunakan.</p><button class="btn mini solution" data-service="Produk Digital">Lihat produk digital</button></div></article></div></div></section>
-<section id="portfolio" class="section dark"><div class="container"><p class="eyebrow">PORTFOLIO</p><h2>Bukti karya, bukan sekadar janji.</h2><div class="toolbar"><input id="search" placeholder="Cari karya..."><select id="filter"><option value="all">Semua kategori</option><option>Branding</option><option>Desain</option><option>Digital</option></select></div><div id="gallery" class="cards"></div></div></section>
-<section id="produk" class="section"><div class="container"><p class="eyebrow">PRODUK & LAYANAN</p><h2>Pilih solusi. Lanjutkan ke checkout.</h2><div id="products" class="cards"></div><p id="productStatus" class="status"></p></div></section>
-<section id="testimoni" class="section dark"><div class="container"><p class="eyebrow">SOCIAL PROOF</p><h2>Pengalaman yang ingin kami ulangi.</h2><div id="testimonials" class="cards"></div></div></section>
-<section class="cta"><div class="container cta-row"><div><p class="eyebrow">READY TO GROW?</p><h2>Belum tahu mulai dari mana?</h2><p class="lead">Biarkan ELANG AI membantu memilih langkah pertama.</p></div><button class="btn green" id="openAi2">🤖 Mulai Konsultasi AI</button></div></section>
-<section id="kontak" class="section"><div class="container two"><div><p class="eyebrow">ORDER & KONSULTASI</p><h2>Jadikan kebutuhan Anda menjadi action plan.</h2><p class="lead">Kirim kebutuhan, pilih layanan, lalu lanjutkan ke pembayaran online jika produknya siap dibeli.</p><div class="socials"><a id="waLink" target="_blank">WhatsApp</a><a href="https://instagram.com/elangkreator" target="_blank">Instagram</a><a href="https://youtube.com/" target="_blank">YouTube</a><a href="https://tiktok.com/" target="_blank">TikTok</a></div></div><form id="orderForm" class="form"><input name="name" required placeholder="Nama lengkap"><input name="email" type="email" placeholder="Email"><input name="contact" required placeholder="WhatsApp"><select name="service" id="serviceSelect"><option>Branding Kit</option><option>Desain Kreatif</option><option>Produk Digital</option><option>Konsultasi Kreatif</option></select><textarea name="message" required rows="5" placeholder="Ceritakan kebutuhan Anda..."></textarea><button class="btn" type="submit">Kirim Konsultasi</button><small id="formStatus" class="status"></small></form></div></section></main>
-<footer class="footer"><div class="container">© 2026 ELANGKREATOR. Creative Business Platform.</div></footer>
-<a class="wa" id="floatingWa" target="_blank">WhatsApp</a>
-<div class="chatbot"><button id="chatToggle" class="chat-head">🤖 <span>ELANG AI Assistant</span><b>×</b></button><div id="chatBody" class="chat-body"><div id="messages" class="messages"><div class="msg bot">Halo! Saya ELANG AI. Saya membantu memilih solusi, menjelaskan layanan, dan mengarahkan Anda ke order atau checkout.</div></div><div class="quick"><button data-q="Saya punya bisnis dan ingin branding">Branding</button><button data-q="Saya membutuhkan desain">Desain</button><button data-q="Saya ingin produk digital">Produk Digital</button><button data-q="Saya belum tahu harus memilih apa">Belum tahu</button></div><form id="chatForm" class="chat-form"><input id="chatInput" placeholder="Tulis pertanyaan..."><button class="btn mini">➤</button></form></div></div>
-<div id="checkoutModal" class="modal"><div class="modal-box"><button class="close" id="closeModal">×</button><p class="eyebrow">CHECKOUT</p><h2 id="checkoutTitle">Beli produk</h2><div id="checkoutSummary" class="order-summary"></div><form id="checkoutForm" class="form"><input name="name" required placeholder="Nama lengkap"><input name="email" type="email" required placeholder="Email"><input name="phone" required placeholder="WhatsApp"><input name="coupon" placeholder="Kode promo (opsional)"><button class="btn green" type="submit">💳 Bayar Sekarang</button><small class="payment-note">Pembayaran akan dibuka melalui Midtrans. Mode awal: Sandbox/test.</small><small id="checkoutStatus" class="status"></small></form></div></div>
-<script type="module" src="assets/js/app.js"></script><script>if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});</script></body></html>
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="ELANGKREATOR — branding, desain, produk digital, AI assistant dan layanan kreatif.">
+  <meta property="og:title" content="ELANGKREATOR — Creative Business Platform">
+  <meta property="og:description" content="Temukan solusi kreatif, konsultasi, produk digital dan checkout online.">
+  <meta name="theme-color" content="#070b12">
+  <link rel="manifest" href="manifest.webmanifest">
+  <title>ELANGKREATOR — Creative Business Platform</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header>
+  <nav class="container nav">
+    <a class="brand" href="#home">
+      🦅 <span>ELANGKREATOR</span>
+    </a>
+
+    <button id="menu" class="menu" aria-label="Menu">
+      ☰
+    </button>
+
+    <div id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#solusi">Solusi</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#produk">Produk</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#kontak">Order</a>
+      <a class="btn mini" href="admin.html">Admin</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+  <div class="container hero-grid">
+
+    <div>
+      <p class="eyebrow">
+        CREATIVE • DIGITAL • AI • GROWTH
+      </p>
+
+      <h1>
+        Ubah ide menjadi
+        <span>brand yang bernilai.</span>
+      </h1>
+
+      <p class="lead">
+        ELANGKREATOR membantu bisnis, creator, dan pemilik brand
+        membangun identitas, desain, produk digital, dan strategi
+        kreatif dalam satu ekosistem.
+      </p>
+
+      <div class="actions">
+        <a class="btn" href="#solusi">
+          Temukan Solusi
+        </a>
+
+        <button class="btn outline" id="openAi">
+          🤖 Tanya ELANG AI
+        </button>
+      </div>
+
+      <p class="status" id="heroStatus"></p>
+    </div>
+
+    <div class="hero-card">
+      <div class="logo-orb">
+        ELANG<br>
+        <strong>KREATOR</strong>
+      </div>
+
+      <p>
+        Create with purpose. Grow with strategy.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="solusi" class="section">
+  <div class="container">
+
+    <p class="eyebrow">
+      SOLUSI BERDASARKAN KEBUTUHAN
+    </p>
+
+    <h2>
+      Apa yang sedang Anda butuhkan?
+    </h2>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="body">
+
+          <h3>
+            🏪 Saya punya bisnis
+          </h3>
+
+          <p>
+            Bangun identitas brand yang terlihat profesional
+            dan konsisten.
+          </p>
+
+          <button
+            class="btn mini solution"
+            data-service="Branding Kit">
+            Saya butuh branding
+          </button>
+
+        </div>
+      </article>
+
+
+      <article class="card">
+        <div class="body">
+
+          <h3>
+            🎨 Saya butuh desain
+          </h3>
+
+          <p>
+            Buat materi visual untuk promosi,
+            sosial media, dan campaign.
+          </p>
+
+          <button
+            class="btn mini solution"
+            data-service="Desain Kreatif">
+            Saya butuh desain
+          </button>
+
+        </div>
+      </article>
+
+
+      <article class="card">
+        <div class="body">
+
+          <h3>
+            💻 Saya ingin produk digital
+          </h3>
+
+          <p>
+            Temukan template dan aset digital
+            yang siap digunakan.
+          </p>
+
+          <button
+            class="btn mini solution"
+            data-service="Produk Digital">
+            Lihat produk digital
+          </button>
+
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="portfolio" class="section dark">
+  <div class="container">
+
+    <p class="eyebrow">
+      PORTFOLIO
+    </p>
+
+    <h2>
+      Bukti karya, bukan sekadar janji.
+    </h2>
+
+    <div class="toolbar">
+
+      <input
+        id="search"
+        placeholder="Cari karya...">
+
+      <select id="filter">
+        <option value="all">
+          Semua kategori
+        </option>
+
+        <option>
+          Branding
+        </option>
+
+        <option>
+          Desain
+        </option>
+
+        <option>
+          Digital
+        </option>
+      </select>
+
+    </div>
+
+    <div id="gallery" class="cards"></div>
+
+  </div>
+</section>
+
+
+<section id="produk" class="section">
+  <div class="container">
+
+    <p class="eyebrow">
+      PRODUK & LAYANAN
+    </p>
+
+    <h2>
+      Pilih solusi. Lanjutkan ke checkout.
+    </h2>
+
+    <div id="products" class="cards"></div>
+
+    <p
+      id="productStatus"
+      class="status">
+    </p>
+
+  </div>
+</section>
+
+
+<section id="testimoni" class="section dark">
+  <div class="container">
+
+    <p class="eyebrow">
+      SOCIAL PROOF
+    </p>
+
+    <h2>
+      Pengalaman yang ingin kami ulangi.
+    </h2>
+
+    <div
+      id="testimonials"
+      class="cards">
+    </div>
+
+  </div>
+</section>
+
+
+<section class="cta">
+  <div class="container cta-row">
+
+    <div>
+
+      <p class="eyebrow">
+        READY TO GROW?
+      </p>
+
+      <h2>
+        Belum tahu mulai dari mana?
+      </h2>
+
+      <p class="lead">
+        Biarkan ELANG AI membantu memilih langkah pertama.
+      </p>
+
+    </div>
+
+    <button
+      class="btn green"
+      id="openAi2">
+      🤖 Mulai Konsultasi AI
+    </button>
+
+  </div>
+</section>
+
+
+<section id="kontak" class="section">
+
+  <div class="container two">
+
+    <div>
+
+      <p class="eyebrow">
+        ORDER & KONSULTASI
+      </p>
+
+      <h2>
+        Jadikan kebutuhan Anda menjadi action plan.
+      </h2>
+
+      <p class="lead">
+        Kirim kebutuhan, pilih layanan, lalu lanjutkan
+        ke pembayaran online jika produknya siap dibeli.
+      </p>
+
+      <div class="socials">
+
+        <a
+          id="waLink"
+          target="_blank">
+          WhatsApp
+        </a>
+
+        <a
+          href="https://instagram.com/elangkreator"
+          target="_blank">
+          Instagram
+        </a>
+
+        <a
+          href="https://youtube.com/"
+          target="_blank">
+          YouTube
+        </a>
+
+        <a
+          href="https://tiktok.com/"
+          target="_blank">
+          TikTok
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <form
+      id="orderForm"
+      class="form">
+
+      <input
+        name="name"
+        required
+        placeholder="Nama lengkap">
+
+      <input
+        name="email"
+        type="email"
+        placeholder="Email">
+
+      <input
+        name="contact"
+        required
+        placeholder="WhatsApp">
+
+      <select
+        name="service"
+        id="serviceSelect">
+
+        <option>
+          Branding Kit
+        </option>
+
+        <option>
+          Desain Kreatif
+        </option>
+
+        <option>
+          Produk Digital
+        </option>
+
+        <option>
+          Konsultasi Kreatif
+        </option>
+
+      </select>
+
+      <textarea
+        name="message"
+        required
+        rows="5"
+        placeholder="Ceritakan kebutuhan Anda...">
+      </textarea>
+
+      <button
+        class="btn"
+        type="submit">
+        Kirim Konsultasi
+      </button>
+
+      <small
+        id="formStatus"
+        class="status">
+      </small>
+
+    </form>
+
+  </div>
+</section>
+
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    © 2026 ELANGKREATOR. Creative Business Platform.
+  </div>
+</footer>
+
+
+<a
+  class="wa"
+  id="floatingWa"
+  target="_blank">
+  WhatsApp
+</a>
+
+
+<div class="chatbot">
+
+  <button
+    id="chatToggle"
+    class="chat-head">
+
+    🤖
+    <span>
+      ELANG AI Assistant
+    </span>
+
+    <b>
+      ×
+    </b>
+
+  </button>
+
+
+  <div
+    id="chatBody"
+    class="chat-body">
+
+    <div
+      id="messages"
+      class="messages">
+
+      <div class="msg bot">
+        Halo! Saya ELANG AI.
+        Saya membantu memilih solusi,
+        menjelaskan layanan, dan mengarahkan
+        Anda ke order atau checkout.
+      </div>
+
+    </div>
+
+
+    <div class="quick">
+
+      <button
+        data-q="Saya punya bisnis dan ingin branding">
+        Branding
+      </button>
+
+      <button
+        data-q="Saya membutuhkan desain">
+        Desain
+      </button>
+
+      <button
+        data-q="Saya ingin produk digital">
+        Produk Digital
+      </button>
+
+      <button
+        data-q="Saya belum tahu harus memilih apa">
+        Belum tahu
+      </button>
+
+    </div>
+
+
+    <form
+      id="chatForm"
+      class="chat-form">
+
+      <input
+        id="chatInput"
+        placeholder="Tulis pertanyaan...">
+
+      <button
+        class="btn mini">
+        ➤
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<div
+  id="checkoutModal"
+  class="modal">
+
+  <div class="modal-box">
+
+    <button
+      class="close"
+      id="closeModal">
+      ×
+    </button>
+
+    <p class="eyebrow">
+      CHECKOUT
+    </p>
+
+    <h2 id="checkoutTitle">
+      Beli produk
+    </h2>
+
+    <div
+      id="checkoutSummary"
+      class="order-summary">
+    </div>
+
+
+    <form
+      id="checkoutForm"
+      class="form">
+
+      <input
+        name="name"
+        required
+        placeholder="Nama lengkap">
+
+      <input
+        name="email"
+        type="email"
+        required
+        placeholder="Email">
+
+      <input
+        name="phone"
+        required
+        placeholder="WhatsApp">
+
+      <input
+        name="coupon"
+        placeholder="Kode promo (opsional)">
+
+      <button
+        class="btn green"
+        type="submit">
+        💳 Bayar Sekarang
+      </button>
+
+      <small class="payment-note">
+        Pembayaran akan dibuka melalui Midtrans.
+        Mode awal: Sandbox/test.
+      </small>
+
+      <small
+        id="checkoutStatus"
+        class="status">
+      </small>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<script
+  type="module"
+  src="assets/js/app.js">
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('sw.js')
+      .catch(() => {});
+  }
+</script>
+
+</body>
+  </html>
