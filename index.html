@@ -94,11 +94,46 @@
             dan konsisten.
           </p>
 
-          <button
-            class="btn mini solution"
-            data-service="Branding Kit">
-            Saya butuh branding
-          </button>
+     <button class="service-btn" onclick="openBranding()">
+  Saya butuh branding
+</button>
+
+<div id="brandingBox" class="solution-box">
+  <button class="close-solution" onclick="closeBranding()">×</button>
+
+  <h2>🚀 Solusi Branding untuk Anda</h2>
+
+  <p>
+    Branding yang kuat dimulai dari identitas yang jelas dan konsisten.
+    Kami bantu membangun tampilan brand agar lebih profesional,
+    mudah dikenali, dan dipercaya audiens.
+  </p>
+
+  <h3>Yang bisa kami bantu:</h3>
+
+  <ul>
+    <li>🎯 Strategi identitas brand</li>
+    <li>🎨 Logo & visual branding</li>
+    <li>📱 Branding media sosial</li>
+    <li>✍️ Konsep dan pesan brand</li>
+  </ul>
+
+  <div class="solution-actions">
+    <button onclick="showBrandingExample()">
+      Lihat Contoh
+    </button>
+
+    <button onclick="openAI()">
+      🤖 Tanya ELANG AI
+    </button>
+
+    <button onclick="contactBranding()">
+      💬 Konsultasi WhatsApp
+    </button>
+  </div>
+
+  <div id="brandingExample"></div>
+</div>
         </div>
       </article>
 
